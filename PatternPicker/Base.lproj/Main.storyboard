@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15A282b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PatternPicker" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="may-TC-z6s"/>
+                        <viewControllerLayoutGuide type="bottom" id="YSD-aI-HGU"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YBb-np-mhU" customClass="PatternPickerView" customModule="PatternPicker" customModuleProvider="target">
+                                <rect key="frame" x="40" y="437" width="240" height="44"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="fOY-fz-ia3"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sb6-3k-yqF" customClass="PatternView" customModule="PatternPicker" customModuleProvider="target">
+                                <rect key="frame" x="41" y="173" width="238" height="222"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Shirt" translatesAutoresizingMaskIntoConstraints="NO" id="IG2-tt-ed3">
+                                <rect key="frame" x="41" y="173" width="238" height="222"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="238" id="MgH-Ri-uaj"/>
+                                    <constraint firstAttribute="width" secondItem="IG2-tt-ed3" secondAttribute="height" multiplier="119:111" id="p7p-uF-dPc"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" red="0.10908867801047117" green="0.10908867801047117" blue="0.10908867801047117" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="IG2-tt-ed3" firstAttribute="width" secondItem="Sb6-3k-yqF" secondAttribute="width" id="Hyj-Ho-vsg"/>
+                            <constraint firstItem="IG2-tt-ed3" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Jfe-wQ-9gQ"/>
+                            <constraint firstItem="IG2-tt-ed3" firstAttribute="leading" secondItem="Sb6-3k-yqF" secondAttribute="trailing" constant="-238" id="La1-v8-bCU"/>
+                            <constraint firstItem="IG2-tt-ed3" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="SbS-BW-zZB"/>
+                            <constraint firstItem="IG2-tt-ed3" firstAttribute="height" secondItem="Sb6-3k-yqF" secondAttribute="height" id="Zal-Qr-hJz"/>
+                            <constraint firstItem="IG2-tt-ed3" firstAttribute="top" secondItem="Sb6-3k-yqF" secondAttribute="bottom" constant="-222" id="fGu-Fj-vAD"/>
+                            <constraint firstItem="YBb-np-mhU" firstAttribute="centerX" secondItem="IG2-tt-ed3" secondAttribute="centerX" id="lSj-md-vWu"/>
+                            <constraint firstItem="YBb-np-mhU" firstAttribute="top" secondItem="IG2-tt-ed3" secondAttribute="bottom" constant="42" id="nY4-zf-rM6"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="patternPicker" destination="YBb-np-mhU" id="ZVn-Jy-2ze"/>
+                        <outlet property="preview" destination="Sb6-3k-yqF" id="oaF-K2-4ba"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="147" y="330"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Shirt" width="346" height="329"/>
+    </resources>
+</document>
