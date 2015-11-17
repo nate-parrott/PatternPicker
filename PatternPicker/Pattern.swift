@@ -45,7 +45,7 @@ class Pattern: NSObject {
             return s
         } else {
             let (h,s,v,a) = primaryColor.hsva
-            return UIColor(hue: h, saturation: s, brightness: v * 0.5, alpha: a)
+            return UIColor(hue: fmod(h + 0.3, 1.0), saturation: s, brightness: v, alpha: a)
         }
     }
     
